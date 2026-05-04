@@ -1,0 +1,71 @@
+---
+layout: default
+title: Corvus Games Studio
+description: Indie game studio. Makers of Corvus Protocol.
+body_class: home
+---
+
+<section class="hero">
+  <div class="container hero__inner">
+    <p class="hero__eyebrow">Indie game studio</p>
+    <h1 class="hero__title">Worlds worth getting lost in.</h1>
+    <p class="hero__lede">
+      We're {{ site.title }} &mdash; a small team building games with a big vision.
+      Our debut title, <strong>{{ site.game.title }}</strong>, is in active development.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="{{ '/corvus-protocol/' | relative_url }}">Discover Corvus Protocol</a>
+      <a class="btn btn--ghost" href="{{ site.game.releases_url }}" rel="noopener" target="_blank">Latest release &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--game-teaser">
+  <div class="container section__inner section__inner--split">
+    <div class="section__media">
+      <img src="{{ site.game.hero_image | relative_url }}" alt="Corvus Protocol key art" loading="lazy" onerror="this.parentElement.classList.add('section__media--placeholder'); this.style.display='none';">
+    </div>
+    <div class="section__copy">
+      <p class="section__eyebrow">Now in development</p>
+      <h2 class="section__title">{{ site.game.title }}</h2>
+      <p class="section__lede">{{ site.game.tagline }}</p>
+      <p>
+        Follow the build as we ship it. Every release goes out through our public
+        release channel on GitHub &mdash; no gatekeeping, no waiting rooms.
+      </p>
+      <a class="btn btn--primary" href="{{ '/corvus-protocol/' | relative_url }}">Learn more</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--socials" id="socials">
+  <div class="container section__inner section__inner--center">
+    <p class="section__eyebrow">Stay in the loop</p>
+    <h2 class="section__title">Follow Corvus</h2>
+    <p class="section__lede">
+      The fastest way to hear about updates, builds, and behind-the-scenes work.
+    </p>
+    <ul class="socials socials--lg">
+      {% for social in site.socials %}
+        <li>
+          <a href="{{ social.url }}" rel="noopener" target="_blank" aria-label="{{ social.name }}">
+            {% include socials/{{ social.icon }}.svg %}
+            <span>{{ social.name }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--support">
+  <div class="container section__inner section__inner--center">
+    <p class="section__eyebrow">Need help?</p>
+    <h2 class="section__title">We're here.</h2>
+    <p class="section__lede">
+      Run into trouble with a build, found a bug, or just want to talk to a human?
+      We've got you.
+    </p>
+    <a class="btn btn--primary" href="{{ '/support/' | relative_url }}">Get support</a>
+  </div>
+</section>

@@ -1,0 +1,82 @@
+---
+layout: default
+title: Corvus Protocol
+description: Corvus Protocol — a sci-fi game by Corvus Games Studio. Download the latest release.
+permalink: /corvus-protocol/
+body_class: game
+---
+
+<section class="hero hero--game">
+  <div class="hero__banner">
+    <img src="{{ site.game.banner_image | relative_url }}" alt="{{ site.game.title }} banner" loading="eager">
+  </div>
+  <div class="container hero__inner">
+    <p class="hero__eyebrow">Now in development</p>
+    <h1 class="hero__title">{{ site.game.title }}</h1>
+    <p class="hero__lede">{{ site.game.tagline }}</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="{{ site.game.releases_url }}" rel="noopener" target="_blank">Download latest release</a>
+      <a class="btn btn--ghost" href="#features">See features &darr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about-game">
+  <div class="container section__inner section__inner--narrow">
+    <p class="section__eyebrow">About the game</p>
+    <h2 class="section__title">A sci-fi experience worth your time.</h2>
+    <p>
+      <em>Replace this with your game's pitch.</em> A short, punchy paragraph
+      explaining what {{ site.game.title }} is, what makes it different, and
+      what kind of player it's for.
+    </p>
+  </div>
+</section>
+
+<section class="section section--features" id="features">
+  <div class="container section__inner">
+    <p class="section__eyebrow">Features</p>
+    <h2 class="section__title">What's in the build</h2>
+    <ul class="feature-grid">
+      <li class="feature">
+        <h3 class="feature__title">Feature one</h3>
+        <p>Short description. What does this feature do for the player?</p>
+      </li>
+      <li class="feature">
+        <h3 class="feature__title">Feature two</h3>
+        <p>Short description. What does this feature do for the player?</p>
+      </li>
+      <li class="feature">
+        <h3 class="feature__title">Feature three</h3>
+        <p>Short description. What does this feature do for the player?</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!--
+  Screenshots gallery — disabled until more screenshots are dropped into
+  /assets/corvus_protocol/. To re-enable, drop images into that folder and
+  uncomment + update the markup below.
+
+<section class="section section--gallery">
+  <div class="container section__inner">
+    <p class="section__eyebrow">Screenshots</p>
+    <h2 class="section__title">In motion</h2>
+    <div class="gallery">
+      <figure class="gallery__item"><img src="{{ '/assets/corvus_protocol/screenshot-01.png' | relative_url }}" alt="Screenshot 1" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="section section--cta">
+  <div class="container section__inner section__inner--center">
+    <h2 class="section__title">Ready to play?</h2>
+    <p class="section__lede">
+      Builds are published to our GitHub release channel. Grab the latest version
+      and let us know what you think.
+    </p>
+    <a class="btn btn--primary" href="{{ site.game.releases_url }}" rel="noopener" target="_blank">Get the latest build</a>
+  </div>
+</section>

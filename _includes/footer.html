@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <span class="site-footer__title">{{ site.title }}</span>
+      <p class="site-footer__tagline">{{ site.tagline }}</p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Footer">
+      <ul>
+        {% for item in site.nav %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="site-footer__socials">
+      <span class="site-footer__socials-label">Follow us</span>
+      <ul class="socials">
+        {% for social in site.socials %}
+          <li>
+            <a href="{{ social.url }}" rel="noopener" target="_blank" aria-label="{{ social.name }}">
+              {% include socials/{{ social.icon }}.svg %}
+              <span class="visually-hidden">{{ social.name }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__legal container">
+    <small>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</small>
+  </div>
+</footer>

@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="{{ '/' | relative_url }}">
+      <img src="{{ site.brand.logo | relative_url }}" alt="" class="site-header__logo">
+      <span class="site-header__brand-text">{{ site.title }}</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav-toggle__btn" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        {% for item in site.nav %}
+          {% assign is_active = false %}
+          {% if page.url == item.url %}{% assign is_active = true %}{% endif %}
+          <li class="site-nav__item">
+            <a class="site-nav__link {% if is_active %}is-active{% endif %}"
+               href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,69 @@
+title: Corvus Games Studio
+tagline: Indie game studio. Makers of Corvus Protocol.
+description: >-
+  Corvus Games Studio is an independent game studio. We make Corvus Protocol —
+  a sci-fi game built with passion and grit. Follow the journey, grab the latest
+  release, and join the community.
+url: "https://corvusgamesstudio.com"
+baseurl: ""
+
+author:
+  name: Corvus Games Studio
+  email: contact@corvusgamesstudio.com
+
+# Navigation order shown in the header
+nav:
+  - title: Home
+    url: /
+  - title: Corvus Protocol
+    url: /corvus-protocol/
+  - title: About
+    url: /about/
+  - title: Support
+    url: /support/
+  - title: Contact
+    url: /contact/
+
+# Edit these to update the footer / home socials section
+socials:
+  - name: GitHub
+    url: https://github.com/Corvus-Games-Studio
+    icon: github
+  - name: Discord
+    url: "#"
+    icon: discord
+  - name: X / Twitter
+    url: "#"
+    icon: twitter
+  - name: YouTube
+    url: "#"
+    icon: youtube
+
+# Studio brand assets
+brand:
+  logo: /assets/corvus_games_studio/corvuslogosmall.png
+  banner: /assets/corvus_games_studio/corvusgames_banner.png
+
+# Game info (used on the Corvus Protocol page + home teaser)
+game:
+  title: Corvus Protocol
+  tagline: A sci-fi experience from Corvus Games Studio.
+  releases_url: https://github.com/Corvus-Games-Studio/Corvus-Protocol-Release-Channel/releases
+  hero_image: /assets/corvus_protocol/CorvusProtocolIcon.png
+  banner_image: "/assets/corvus_protocol/2026-04-14 18_30_26-Corvus Protocol1600400.png"
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:path/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - node_modules/

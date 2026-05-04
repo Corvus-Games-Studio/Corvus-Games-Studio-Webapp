@@ -1,0 +1,40 @@
+---
+layout: default
+title: About
+description: Who we are and what we're building at Corvus Games Studio.
+permalink: /about/
+body_class: about
+---
+
+<section class="hero hero--compact hero--with-banner">
+  <div class="hero__banner">
+    <img src="{{ site.brand.banner | relative_url }}" alt="" loading="eager">
+  </div>
+  <div class="container hero__inner">
+    <p class="hero__eyebrow">About</p>
+    <h1 class="hero__title">We're {{ site.title }}.</h1>
+    <p class="hero__lede">A small studio with a big appetite for the kinds of games we wish existed.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container section__inner section__inner--narrow prose">
+    <h2>Our story</h2>
+    <p>
+      <em>Replace this with the studio's story.</em> Where did the studio come from?
+      What kinds of experiences are you trying to make? What do you stand for?
+    </p>
+
+    <h2>The team</h2>
+    <p>
+      <em>Replace this with team bios or a one-liner about the team.</em>
+    </p>
+
+    <h2>What we're working on</h2>
+    <p>
+      Right now, all of our energy goes into <a href="{{ '/corvus-protocol/' | relative_url }}">{{ site.game.title }}</a>.
+      Builds drop directly on
+      <a href="{{ site.game.releases_url }}" rel="noopener" target="_blank">our public release channel</a>.
+    </p>
+  </div>
+</section>
