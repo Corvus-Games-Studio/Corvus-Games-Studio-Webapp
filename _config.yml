@@ -67,7 +67,7 @@ brand:
 # Game info (used on the Corvus Protocol page + home teaser)
 game:
   title: Corvus Protocol
-  tagline: A sci-fi experience from Corvus Games Studio.
+  tagline: A bird-brained tactical roguelite from Corvus Games Studio.
   repo: Corvus-Games-Studio/Corvus-Protocol-Release-Channel
   releases_url: https://github.com/Corvus-Games-Studio/Corvus-Protocol-Release-Channel/releases
   hero_image: /assets/corvus_protocol/CorvusProtocolIcon.png

@@ -255,7 +255,11 @@ p { margin: 0 0 1em; }
 }
 
 .section__inner--narrow { max-width: 720px; }
-.section__inner--center { text-align: center; .hero__cta, .socials { justify-content: center; } }
+.section__inner--center {
+  text-align: center;
+  .hero__cta, .socials { justify-content: center; }
+  .hero__lede, .section__lede { margin-left: auto; margin-right: auto; }
+}
 
 .section__inner--split {
   display: grid;
