@@ -44,9 +44,6 @@ socials:
   - name: Reddit
     url: https://www.reddit.com/user/CorvusGamesStudio/
     icon: reddit
-  - name: GitHub
-    url: https://github.com/Corvus-Games-Studio
-    icon: github
 
 # Funding pages — surfaced on the Support page
 funding:
