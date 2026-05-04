@@ -26,18 +26,38 @@ nav:
 
 # Edit these to update the footer / home socials section
 socials:
+  - name: Discord
+    url: https://discord.gg/JbSK3W9cj3
+    icon: discord
+  - name: X
+    url: https://x.com/CorvusGame
+    icon: x
+  - name: Instagram
+    url: https://www.instagram.com/corvusgamesstudio/
+    icon: instagram
+  - name: TikTok
+    url: https://www.tiktok.com/@corvusgames
+    icon: tiktok
+  - name: Threads
+    url: https://www.threads.com/@corvusgamesstudio
+    icon: threads
+  - name: Reddit
+    url: https://www.reddit.com/user/CorvusGamesStudio/
+    icon: reddit
   - name: GitHub
     url: https://github.com/Corvus-Games-Studio
     icon: github
-  - name: Discord
-    url: "#"
-    icon: discord
-  - name: X / Twitter
-    url: "#"
-    icon: twitter
-  - name: YouTube
-    url: "#"
-    icon: youtube
+
+# Funding pages — surfaced on the Support page
+funding:
+  - name: Buy Me a Coffee
+    url: https://buymeacoffee.com/corvusgames
+    blurb: Toss us a one-time tip to fuel the next build.
+    cta: Buy us a coffee
+  - name: Ko-fi
+    url: https://ko-fi.com/corvusgames
+    blurb: Become a recurring supporter and unlock Early Access perks.
+    cta: Support on Ko-fi
 
 # Studio brand assets
 brand:
@@ -48,6 +68,7 @@ brand:
 game:
   title: Corvus Protocol
   tagline: A sci-fi experience from Corvus Games Studio.
+  repo: Corvus-Games-Studio/Corvus-Protocol-Release-Channel
   releases_url: https://github.com/Corvus-Games-Studio/Corvus-Protocol-Release-Channel/releases
   hero_image: /assets/corvus_protocol/CorvusProtocolIcon.png
   banner_image: "/assets/corvus_protocol/2026-04-14 18_30_26-Corvus Protocol1600400.png"

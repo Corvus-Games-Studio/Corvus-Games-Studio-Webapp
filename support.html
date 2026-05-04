@@ -10,16 +10,38 @@ body_class: support
   <div class="container hero__inner">
     <p class="hero__eyebrow">Support</p>
     <h1 class="hero__title">We've got your back.</h1>
-    <p class="hero__lede">Stuck on a build? Found a bug? Need to reach a human? Pick the path that fits.</p>
+    <p class="hero__lede">Want to support the studio and unlock Early Access? Stuck on a build? Need to reach a human? Pick the path that fits.</p>
+  </div>
+</section>
+
+<section class="section section--funding" id="fund-the-studio">
+  <div class="container section__inner">
+    <p class="section__eyebrow">Support the studio</p>
+    <h2 class="section__title">Fund the next build, get Early Access.</h2>
+    <p class="section__lede">
+      Every contribution goes straight into making {{ site.game.title }} better &mdash;
+      and it earns you Early Access to upcoming builds.
+    </p>
+    <ul class="funding-grid">
+      {% for fund in site.funding %}
+        <li class="funding-card">
+          <h3 class="funding-card__title">{{ fund.name }}</h3>
+          <p>{{ fund.blurb }}</p>
+          <a class="btn btn--primary" href="{{ fund.url }}" rel="noopener" target="_blank">{{ fund.cta }}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 
 <section class="section">
   <div class="container section__inner">
+    <p class="section__eyebrow">Other ways we can help</p>
+    <h2 class="section__title">Bugs, builds, and conversations.</h2>
     <ul class="support-grid">
       <li class="support-card">
         <h3 class="support-card__title">Report a bug</h3>
-        <p>Open an issue on the release channel — we read every one.</p>
+        <p>Open an issue on the release channel &mdash; we read every one.</p>
         <a class="btn btn--ghost" href="{{ site.game.releases_url | replace: '/releases', '/issues' }}" rel="noopener" target="_blank">Open an issue &rarr;</a>
       </li>
       <li class="support-card">

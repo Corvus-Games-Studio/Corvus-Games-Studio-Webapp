@@ -14,8 +14,9 @@ body_class: game
     <p class="hero__eyebrow">Now in development</p>
     <h1 class="hero__title">{{ site.game.title }}</h1>
     <p class="hero__lede">{{ site.game.tagline }}</p>
+    {% assign discord = site.socials | where: "icon", "discord" | first %}
     <div class="hero__cta">
-      <a class="btn btn--primary" href="{{ site.game.releases_url }}" rel="noopener" target="_blank">Download latest release</a>
+      <a class="btn btn--primary" href="{{ discord.url }}" rel="noopener" target="_blank">Join us on Discord!</a>
       <a class="btn btn--ghost" href="#features">See features &darr;</a>
     </div>
   </div>
@@ -33,26 +34,21 @@ body_class: game
   </div>
 </section>
 
-<section class="section section--features" id="features">
+<section class="section section--features" id="features"
+         data-release-repo="{{ site.game.repo }}"
+         data-release-fallback-url="{{ discord.url }}"
+         data-release-fallback-label="Discord">
   <div class="container section__inner">
-    <p class="section__eyebrow">Features</p>
-    <h2 class="section__title">What's in the build</h2>
-    <ul class="feature-grid">
-      <li class="feature">
-        <h3 class="feature__title">Feature one</h3>
-        <p>Short description. What does this feature do for the player?</p>
-      </li>
-      <li class="feature">
-        <h3 class="feature__title">Feature two</h3>
-        <p>Short description. What does this feature do for the player?</p>
-      </li>
-      <li class="feature">
-        <h3 class="feature__title">Feature three</h3>
-        <p>Short description. What does this feature do for the player?</p>
-      </li>
-    </ul>
+    <p class="section__eyebrow"><span data-release-eyebrow>Latest release</span></p>
+    <h2 class="section__title" data-release-title>What's in the build</h2>
+    <p class="release-meta" data-release-meta hidden></p>
+    <div class="release-notes" data-release-notes aria-live="polite">
+      <p class="release-notes__loading">Loading the latest release notes&hellip;</p>
+    </div>
   </div>
 </section>
+
+<script src="{{ '/assets/js/releases.js' | relative_url }}" defer></script>
 
 <!--
   Screenshots gallery — disabled until more screenshots are dropped into
@@ -74,9 +70,9 @@ body_class: game
   <div class="container section__inner section__inner--center">
     <h2 class="section__title">Ready to play?</h2>
     <p class="section__lede">
-      Builds are published to our GitHub release channel. Grab the latest version
-      and let us know what you think.
+      Builds are published to our GitHub release channel. Support us on one of
+      our funding pages and get Early Access!
     </p>
-    <a class="btn btn--primary" href="{{ site.game.releases_url }}" rel="noopener" target="_blank">Get the latest build</a>
+    <a class="btn btn--primary" href="{{ '/support/' | relative_url }}">Support us here!</a>
   </div>
 </section>

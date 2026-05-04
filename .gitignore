@@ -7,3 +7,4 @@ Gemfile.lock
 vendor/
 .DS_Store
 node_modules/
+links.txt

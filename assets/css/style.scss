@@ -303,6 +303,66 @@ p { margin: 0 0 1em; }
   margin-bottom: 0.4rem;
 }
 
+// ---- Release notes (live from GitHub) -------------------------------------
+.release-meta {
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  margin: -0.25rem 0 1.25rem;
+}
+
+.release-notes {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.75rem 1.25rem;
+  margin: 1rem 0 1.5rem;
+  color: var(--text);
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--accent);
+    margin: 1.5rem 0 0.4rem;
+    &:first-child { margin-top: 0; }
+  }
+  h3 { font-size: 1.1rem; }
+  h4 { font-size: 1rem; }
+  h5, h6 { font-size: 0.95rem; }
+
+  p { margin: 0 0 0.9em; }
+
+  ul {
+    margin: 0 0 1em;
+    padding-left: 1.4rem;
+    li { margin-bottom: 0.35rem; }
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.92em;
+    background: var(--bg-elev-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.08em 0.35em;
+  }
+
+  &__loading,
+  &__error {
+    color: var(--text-muted);
+    margin: 0;
+  }
+}
+
+.release-notes__cta {
+  margin-top: 1.25rem;
+}
+
 // ---- Gallery ---------------------------------------------------------------
 .gallery {
   display: grid;
@@ -321,6 +381,39 @@ p { margin: 0 0 1em; }
     width: 100%; height: 100%;
     object-fit: cover;
   }
+}
+
+// ---- Funding cards ---------------------------------------------------------
+.funding-grid {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.funding-card {
+  background:
+    linear-gradient(180deg, rgba(94, 224, 199, 0.08), transparent 60%),
+    var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: border-color .15s ease, transform .15s ease;
+  &:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .btn { margin-top: auto; align-self: flex-start; }
+}
+.funding-card__title {
+  font-family: var(--font-display);
+  color: var(--text);
+  font-size: 1.25rem;
+  margin: 0;
 }
 
 // ---- Support cards ---------------------------------------------------------
